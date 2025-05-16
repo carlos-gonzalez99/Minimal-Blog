@@ -6,36 +6,91 @@
     box-sizing: border-box;
 }
 
+/* ||VARIABLES */
+:root {
+    --FS: 1.2em;
+    --FS-HEADINGS: 2em;
+    
+    /* MARGIN */
+    --MTB : 16px;
+    --MR: 16px;  
+}
+
 body {
     height: 100vh;
-    font-size: 14px;
+    font-size: var(--FS);
 }
 
 .header__img {
     margin: 16px;
     width: 100%;
     height: auto;
+    display: block;
 }
+
+/* ||HEADER */
 
 .header__p {
-    background-color: rgba(207, 7, 242, 0.53);
+    background-color: rgba(197, 195, 197, 0.41);
+    color: blueviolet;
     width: min-content;
-    border-radius: 10px;
-    padding: 8px;
-    margin: 16px;
+    border-radius: 20px;
+    padding: 4px 16px;
+    margin: var(--MTB);
+    font-weight: bold;
 }
 
+/* ||MAIN */
+
 .main__h1 {
-    margin: 16px 16px 6px 16px;
+    margin: 16px 16px 3px 16px;
+    font-size: var(--FS-HEADINGS);
 }
 
 .main__p {
-    margin: 16px 16px 40px 16px;
+    margin: 3px 16px 20px 16px;
 }
+
+/* ||FOOTER */
 
 .footer {
     margin: 20px 16px;
 }
+
+/* ||MEDIA QUERIES */
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    :root {
+        --FS : 0.9em;
+        --FS-HEADINGS: 1.5em;
+    }
+  }
+  
+  /* Tablets */
+  @media screen and (max-width: 768px) {
+    :root {
+        --FS : 1em;
+        --FS-HEADINGS: 1.8em;
+    }
+  }
+  
+  /* Laptops */
+  @media screen and (max-width: 1024px) {
+        :root {
+        --FS : 1.1em;
+        --FS-HEADINGS: 2.1em;
+    }
+  }
+  
+  /* Desktop */
+  @media screen and (min-width: 1025px) {
+    :root {
+        --FS : 1.2em;
+        --FS-HEADINGS: 2.4em;
+    }
+  }
+
 
 
 
